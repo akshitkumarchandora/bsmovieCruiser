@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+<title>Movie Cruiser</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css"/>
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+  
+    <style>
+         .material-icons {
+        vertical-align: middle;
+            }
+        .navbar{
+            background-color: #b366ff;
+        }
+       .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #b366ff;
+   color: white;
+ 
+}
+               
+    </style>
+    </head>
+    <body>
+        
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href=#><i class="material-icons">movie</i> Movie Cruiser</a>
+        </nav>
+        
+        <div class="container-fluid mt-3">
+        <form action="edit-movie-item-success.html">
+            <h1>Edit Movie</h1>
+           <div class="row">
+               <div class="col-12">
+               <div class="form-group">
+                   <label for="title">Movie Name</label>
+            <input type="text" class="form-control" id="title" name="title" maxlength=200/></div>
+                
+            
+               
+               </div>
+            </div> 
+            
+            <div class="row mt-1">
+                <div class="col-md-3">
+                    <div class="form-group">
+                    <label for="price">Box Office</label>
+                    <input type="text" class="form-control"  id="boxOffice" name="boxOffice" />
+                        
+                </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                     <label for="dateOfLaunch">Date Of Release</label>
+                    <input type="text" class="form-control" id="dateOfRelease" name="dateOfRelease" placeholder="dd/mm/yyyy">
+                      
+                </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        
+                        <label for="category">Genre</label>
+                        <select class="form-control" id="genre" name="genre">
+                            <option value=""></option>
+                            <option>Action</option>
+                            <option>Anime</option>
+                            <option>Drama</option>
+                            <option>Thriller</option>
+                            <option>Romance</option>
+                            <option>Horror</option>
+                        </select>
+                    </div>
+                  
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="active">Active</label><br>
+					<label class="radio-inline">
+						<input type="radio" id="active" name="active">Yes
+					</label>
+					<label class="radio-inline">
+						<input type="radio" id="active" name="active">No
+					</label>
+                        <div id="status7" style="color: red;"></div>
+                    </div>
+                </div>
+            </div>
+           
+            
+            <div class="row mt-3">
+            <div class="col-md-3">
+                <div class="form-group">
+                <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+                </div>
+            </div>
+            </form>
+        </div>
+        
+         <div class="footer">
+  <span class="foot-text">	PuruMovies ©Copyright 2020</span>
+</div>
+        
+          
+		<script>
+			$('#dateoflaunch').datepicker({
+			uiLibrary: 'bootstrap4',
+			format: 'dd/mm/yyyy'
+			});
+			</script>
+			<script>
+			$("button").click(function(){
+			  $("button").removeClass("active");
+			  $(this).addClass("active");
+            });</script>
+				
+    </body>
+</HTML>
